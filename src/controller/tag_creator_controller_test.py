@@ -11,8 +11,6 @@ def test_create(mock_create_barcode):
     mock_create_barcode.return_value = mock_value
     tag_creator_controller = TagCreatorController()
     response = tag_creator_controller.create(mock_value)
-    # print()
-    # print(response)
 
     assert isinstance(response, dict)
     assert "data" in response
